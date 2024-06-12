@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics Web Store</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-repeat: no-repeat;
+            background-color: #c2ed8e;
+        }
+
+        /* #edecec #c6c6c6 */
+        .shipp {
+            height: 47px;
+            width: 407px;
+            padding-left: 10px;
+            padding-top: 3px;
+        }
+
+        .Mainhead {
+            background-color: black;
+            height: 57px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            /* Ensure the navigation bar stays above other elements */
+        }
+
+        .navbar li {
+            float: right;
+            list-style: none;
+            margin: -14px 12px;
+            padding: 5px;
+            padding-right: 6px;
+            position: relative;
+            bottom: 43px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            text-decoration: underline;
+        }
+
+        .logo {
+            padding-top: 5px;
+            height: 60px;
+            width: 189px;
+            padding-left: 13px;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 50.42%;
+            left: 27%;
+            transform: translate(-50%, -50%);
+            background: #c2ed8e;
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .search-box:hover>.search-txt {
+            width: 240px;
+            padding: 0 6px;
+        }
+
+        .search-box:hover>.search-btn {
+            background: white;
+            color: black;
+        }
+
+        .search-btn {
+            color: #eeeeee;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .search-btn>i {
+            font-size: 20px;
+        }
+
+        .search-txt {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
+            font-weight: bold;
+        }
+
+        .subhead {
+            background-color: white;
+            position: fixed;
+            top: 57px;
+            /* Adjust as needed to avoid overlapping with the Mainhead */
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            /* Ensure the navigation bar stays above other elements */
+        }
+
+        .right2 {
+            display: inline-block;
+            color: black;
+            /* border: 3px solid black; */
+            position: relative;
+            left: 914px;
+            top: -9px;
+        }
+
+
+        .nvbr2 li {
+            float: right;
+            list-style: none;
+            margin: -2px;
+            padding-right: 23px;
+        }
+
+        .nvbr2 li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        .nvim2 {
+            height: 41px;
+            width: 117px;
+        }
+
+        .cart {
+            height: 41px;
+            width: 57px;
+        }
+
+        .scroll {
+            text-align: center;
+            font-size: 42px;
+            /* border: 2px solid black; */
+            margin-top: 164px;
+            font-weight: bolder;
+            color: rgb(16, 1, 85)
+        }
+
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .hero p {
+            animation: fadeIn 1s 0.5s ease-in-out;
+        }
+
+        .featured-products {
+            /* margin-top: 50px; */
+            text-align: justify;
+        }
+
+        .product {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+            padding-top: 32px;
+            padding-left: 50px;
+            padding-right: 50px;
+            background-color: white;
+            margin-left: 26px;
+            margin-right: 26px;
+            margin-top: 41px;
+            padding-bottom: 22px;
+        }
+
+        .product img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 40px;
+            animation: zoomIn 0.5s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .product h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            animation: slideUp 0.5s ease-in-out;
+        }
+
+        .product p {
+            margin-top: 5px;
+            animation: slideUp 0.5s 0.5s ease-in-out;
+        }
+
+        .footer {
+            background-color: #222;
+            color: white;
+            padding: 37px 0px;
+            position: relative;
+            top: 43px;
+            /* border-bottom: 55px solid black; */
+            height: 486px;
+        }
+
+        .footer-links {
+            margin-top: -5px;
+            /* border: 2px solid white; */
+            padding-right: 505px;
+            height: 197px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-social {
+            margin-top: 183px;
+            text-align: center;
+        }
+
+        .footer-social a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 10px;
+            /* padding-top: 50px; */
+        }
+
+        .dabba {
+            display: inline-block;
+            /* border: 2px solid white; */
+            font-size: 18px;
+            text-align: left;
+            /* margin-bottom: 20px; */
+            padding: 17px;
+        }
+
+        .dabba a {
+            text-decoration: underline;
+        }
+
+        .watdr {
+            width: 50px;
+            height: 50px;
+        }
+
+        .dabba0 {
+            position: relative;
+            bottom: 111px;
+            padding-left: 27px;
+        }
+
+        .name {
+            font-size: 30px;
+            display: inline-block;
+            position: relative;
+            bottom: 16px;
+            left: 7px;
+        }
+
+        .dabba1 {
+            position: relative;
+            left: 107px;
+            bottom: 21px;
+        }
+
+        .dabba2 {
+            position: relative;
+            left: 183px;
+            top: 21px;
+        }
+
+        .dabba3 {
+            position: relative;
+            left: 256px;
+            bottom: 21px;
+        }
+
+        .dabba4 {
+            position: relative;
+            left: 1267px;
+            bottom: 266px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="Mainhead">
+        <img class="shipp" src="Screenshot 2023-07-22 135438.png" alt="#Shipping">
+
+        <div class="right">
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="">&#9743;&nbsp;123-245-2534</a></li>
+                    <li><a href="">Help-Center</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="subhead">
+        <img class="logo" src="logon.jpg" alt="">
+        <div class="search-box">
+            <input type="text" name="name" class="search-txt" placeholder="Type to search" />
+            <a class="search-btn" href="#">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="right2">
+            <nav class="nvbr2">
+                <ul>
+                    <li><a href=""><img class="cart" src="Screenshot 2023-07-22 194428.png" alt="Cart"></a></li>
+                    <li><a href=""><img class="nvim2" src="Screenshot 2023-07-22 202628.png" alt="Favorites"></a></li>
+                    <li><a href="login.html"><img class="nvim2" src="Screenshot 2023-07-22 201957.png" alt="Login"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="scroll">
+        SHoP SMaRT, SHoP EaSY
+    </div>
+    <section class="featured-products">
+        <div class="product">
+            <img src="itab-fotor-bg-remover-2023081518273.png" alt="Product 1">
+            <h3>Apple 2021 iPad Pro M1 chip</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;1,44,037</span>
+            <span><s>M.R.P 1,48,999</s></span>
+        </div>
+        <div class="product">
+            <img src="sams8tab.jpg" alt="Product 2">
+            <h3>Samsung Galaxy Tab S8(8GB, 128GB)</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;56,999
+            </span>
+            <span><s>M.R.P 71,499</s></span>
+        </div>
+        <div class="product">
+            <img src="ipad.jpg" alt="Product 3">
+            <h3>Apple 2022 10.9-inch iPad - Blue </h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;74,880</span>
+            <span><s>M.R.P 93,000</s></span>
+        </div>
+    </section>
+    <section class="featured-products">
+        <div class="product">
+            <img src="s7fe.jpg" alt="Product 1">
+            <h3>Samsung Galaxy Tab S7 FE | 31.50cm</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;45,998</span>
+            <span><s>M.R.P 49,999</s></span>
+        </div>
+        <div class="product">
+            <img src="ipadair.jpg" alt="Product 2">
+            <h3>Apple 2022 iPad Air M1 Chip</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;43,690</span>
+            <span><s>M.R.P 52,300</s></span>
+        </div>
+        <div class="product">
+            <img src="xiaomi2-fotor-bg-remover-20230815184414.png"Product 3">
+            <h3>Xiaomi Pad 5| (6GB, 256GB)| 120Hz</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;26,990</span>
+            <span><s>M.R.P 34,000/s></span>
+        </div>
+    </section>
+    <section class="featured-products">
+        <div class="product">
+            <img src="Redmi5.jpg" alt="Product 1">
+            <h3>Redmi Pad | MediaTek Helio G99 | 26.95cm</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;15,999</span>
+            <span><s>M.R.P 28,999</s></span>
+        </div>
+        <div class="product">
+            <img src="gala8.jpg" alt="Product 2">
+            <h3>Samsung Galaxy Tab A8 26.69cm (10.5 inch)</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;54,000</span>
+            <span><s>M.R.P 63,000</s></span>
+        </div>
+        <div class="product">
+            <img src="Lenovo.jpg" alt="Product 3">
+            <h3>Lenovo M10 Fhd Plus 2Nd Gen 10.3 Inches</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <span style="font-size: 22px;">&#8377;&nbsp;19,999</span>
+            <span><s>M.R.P 39,999</s></span>
+        </div>
+    </section>
+
+    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+
+
+            <div class="dabba dabba0">
+                <img src="Water drops.png" alt="WATER BREATH" class="watdr">
+                <div class="name">
+                    Water Breath
+                </div><br>
+                Powering Your World, One Click at a Time:<br><br> Explore, Shop, and Innovate with Us!
+            </div>
+
+            <div class="dabba dabba1">
+                <span><strong>Store Location</strong></span>
+                <br><br><br>
+                &nbsp;500 Virat Kohli Street<br><br>
+                &nbsp;Mumbai City, CA 125467<br><br>
+                &nbsp;information@mysite.com<br><br>
+                &nbsp;123-245-2435
+            </div>
+
+            <div class="dabba dabba2">
+                <span><strong>Shop</strong></span>
+                <br><br><br>
+                <a href="shopall.html">Shop All</a><br><br>
+                <a href="Computers.html">Laptops</a><br><br>
+                <a href="Smartphones.html">Tablets</a><br><br>
+                <a href="Tablets.html">Smartphones</a><br><br>
+                <a href="Audio.html">Audio</a><br>
+            </div>
+            <div class="dabba dabba3">
+                <span><strong>Customer Support</strong></span>
+                <br><br><br>
+                <a href="contact us.html">Contact-Us</a><br><br>
+                <a href="#">Help Center</a><br><br>
+                <a href="aboutus.html">About-Us</a><br><br>
+                <a href="careerpage.html">Careers</a><br>
+            </div>
+            <div class="dabba dabba4">
+                <span><strong>Policy</strong></span>
+                <br><br><br>
+                <a href="shipping and returns.html">Shipping & Returns</a><br><br>
+                <a href="terms and codition.html">Terms & Conditions</a><br><br>
+                <a href="payments.html">Payment Methods</a><br><br>
+                <a href="faq.html">FAQ</a><br>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://in.linkenin.com"><i class="fa fa-linkedin"></i></a>
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

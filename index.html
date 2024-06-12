@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💧Water Breath💧</title>
+    <style>
+        body {
+            background-image: url(bg1.jpg);
+            background-size: 1600px 800px;
+            margin: 0px;
+            padding: 0px;
+            background-repeat: no-repeat;
+            background-color: #edecec;
+        }
+
+        /* #edecec #c6c6c6 */
+        .shipp {
+            height: 47px;
+            width: 407px;
+            padding-left: 10px;
+            padding-top: 3px;
+        }
+
+        .Mainhead {
+            background-color: black;
+            height: 57px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            /* Ensure the navigation bar stays above other elements */
+        }
+
+        .navbar li {
+            float: right;
+            list-style: none;
+            margin: -14px 12px;
+            padding: 5px;
+            padding-right: 6px;
+            position: relative;
+            bottom: 43px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            text-decoration: underline;
+        }
+
+        .logo {
+            padding-top: 5px;
+            height: 60px;
+            width: 189px;
+            padding-left: 13px;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 50.42%;
+            left: 27%;
+            transform: translate(-50%, -50%);
+            background: #f8bec7e4;
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .search-box:hover>.search-txt {
+            width: 240px;
+            padding: 0 6px;
+        }
+
+        .search-box:hover>.search-btn {
+            background: white;
+            color: black;
+        }
+
+        .search-btn {
+            color: #eeeeee;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .search-btn>i {
+            font-size: 20px;
+        }
+
+        .search-txt {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
+            font-weight: bold;
+        }
+
+        .subhead {
+            background-color: white;
+            position: fixed;
+            top: 57px;
+            /* Adjust as needed to avoid overlapping with the Mainhead */
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            /* Ensure the navigation bar stays above other elements */
+        }
+
+        .right2 {
+            display: inline-block;
+            color: black;
+            /* border: 3px solid black; */
+            position: relative;
+            left: 914px;
+            top: -9px;
+        }
+
+
+        .nvbr2 li {
+            float: right;
+            list-style: none;
+            margin: -2px;
+            padding-right: 23px;
+        }
+
+        .nvbr2 li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        .navbar3 {
+            background-color: #333;
+            width: 100%;
+            position: sticky;
+            top: 127px;
+            /* Adjust this value to position the navbar */
+            z-index: 1000;
+        }
+
+        .navbar3 a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .navbar3 a:hover {
+            background-color: #555;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+
+        .nvim2 {
+            height: 41px;
+            width: 117px;
+        }
+
+        .cart {
+            height: 41px;
+            width: 57px;
+        }
+
+        .homcon {
+            display: inline-block;
+            padding-top: 228px;
+            padding-left: 830px;
+        }
+
+        .red {
+            background-color: red;
+            color: white;
+            font-size: 40px;
+        }
+
+        .maincon {
+            font-weight: bold;
+            font-size: 70px;
+            margin: 0px;
+        }
+
+        .btn {
+            background-color: #0d6efd;
+            color: #fff;
+            text-decoration: none;
+            font-size: 28px;
+            padding: 12px 72px;
+            border-radius: 60px;
+        }
+
+        .btn:hover{
+            background-color: #0d36fd;
+        }
+
+        .best {
+            /* border: 3px solid red; */
+            background-color: #96b6e5;
+            padding: 10px;
+            margin-top: 70px;
+        }
+
+        .top {
+            display: inline-block;
+            /* border: 2px solid #2f3640; */
+            margin: 0px 525px;
+            font-size: 45px;
+        }
+
+        .phone {
+            margin-top: 213px;
+            margin-left: 35px;
+            height: 471px;
+            margin-right: 42px;
+        }
+
+        .S23 {
+            height: 471px;
+            width: 689px;
+        }
+
+        .buy1 a {
+            border: 2px solid #66a2d8;
+            background-color: white;
+            color: black;
+            padding: 10px 56px;
+            text-decoration: none;
+            font-size: 22px;
+            border-radius: 50px;
+            position: relative;
+            bottom: 117px;
+            left: 36px;
+        }
+
+        .buy1 a:hover {
+            border: 2px solid white;
+            background-color: #999999;
+            color: White;
+        }
+
+        .tooth {
+            height: 471px;
+            width: 689px;
+            position: relative;
+            bottom: 501px;
+            left: 750px;
+        }
+
+        .buy2 a {
+            border: 2px solid #66a2d8;
+            background-color: white;
+            color: black;
+            padding: 10px 56px;
+            text-decoration: none;
+            font-size: 22px;
+            border-radius: 50px;
+            position: relative;
+            bottom: 607px;
+            left: 788px;
+        }
+
+        .buy2 a:hover {
+            border: 2px solid white;
+            background-color: #54777d;
+            color: White;
+        }
+
+        .box {
+            /* border: #2f3640; */
+            width: 1439px;
+            height: 205px;
+            position: relative;
+            bottom: 458px;
+        }
+
+        .footer {
+            background-color: #222;
+            color: white;
+            padding: 37px 0px;
+            position: relative;
+            top: 340px;
+            /* border-bottom: 55px solid black; */
+            height: 486px;
+        }
+
+        .footer-links {
+            margin-top: -5px;
+            /* border: 2px solid white; */
+            padding-right: 505px;
+            height: 197px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-social {
+            margin-top: 183px;
+            text-align: center;
+        }
+
+        .footer-social a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 10px;
+            /* padding-top: 50px; */
+        }
+
+        .dabba {
+            display: inline-block;
+            /* border: 2px solid white; */
+            font-size: 18px;
+            text-align: left;
+            /* margin-bottom: 20px; */
+            padding: 17px;
+        }
+
+        .dabba a {
+            text-decoration: underline;
+        }
+
+        .watdr {
+            width: 50px;
+            height: 50px;
+        }
+
+        .dabba0 {
+            position: relative;
+            bottom: 111px;
+            padding-left: 27px;
+        }
+
+        .name {
+            font-size: 30px;
+            display: inline-block;
+            position: relative;
+            bottom: 16px;
+            left: 7px;
+        }
+
+        .dabba1 {
+            position: relative;
+            left: 107px;
+            bottom: 21px;
+        }
+
+        .dabba2 {
+            position: relative;
+            left: 183px;
+            top: 21px;
+        }
+
+        .dabba3 {
+            position: relative;
+            left: 256px;
+            bottom: 21px;
+        }
+
+        .dabba4 {
+            position: relative;
+            left: 1267px;
+            bottom: 266px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header class="Mainhead">
+        <img class="shipp" src="Screenshot 2023-07-22 135438.png" alt="#Shipping">
+
+        <div class="right">
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="">&#9743;&nbsp;123-245-2534</a></li>
+                    <li><a href="">Help-Center</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="subhead">
+        <img class="logo" src="logon.jpg" alt="">
+        <div class="search-box">
+            <input type="text" name="name" class="search-txt" placeholder="Type to search" />
+            <a class="search-btn" href="#">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="right2">
+            <nav class="nvbr2">
+                <ul>
+                    <li><a href=""><img class="cart" src="Screenshot 2023-07-22 194428.png" alt="Cart"></a></li>
+                    <li><a href=""><img class="nvim2" src="Screenshot 2023-07-22 202628.png" alt="Favorites"></a></li>
+                    <li><a href="login.html"><img class="nvim2" src="Screenshot 2023-07-22 201957.png" alt="Login"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <nav class="navbar3">
+        <a href="shopall.html">Shop all</a>
+        <a href="Computers.html">Laptops</a>
+        <a href="Tablets.html">Tablets</a>
+        <a href="Smartphones.html">Smartphones</a>
+        <a href="Audio.html">Audio</a>
+    </nav>
+
+    <div class="homcon">
+        <span class="red">&nbsp;Best Prices&nbsp;</span>
+        <p class="maincon">Incredible Prices</p>
+        <p class="maincon">on All Your</p>
+        <p class="maincon">Favourite Items</p>
+        <p style="font-size: 30px;">Get more for less on selected brands</p>
+        <a href="shopall.html" class="btn">Shop Now</a>
+    </div>
+
+    <div class="phone">
+        <img class="S23" src="Buy1.png" alt="Click the buy button to buy our top sellers: Samsung S23 Pro">
+        <div class="buy1">
+            <a href="#">Shop</a>
+        </div>
+        <img class="tooth" src="Blue.png" alt="Click the buy button to buy our top sellers: Samsung S23 Pro">
+        <div class="buy2">
+            <a href="#">Shop</a>
+        </div>
+
+        <img src="box.png"
+            alt="1. Curb side pickup 2. Free shipping on orders over Rs. 4,999 3. Low prices guaranteed  4. Available to you 24/7 "
+            class="box">
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+
+
+            <div class="dabba dabba0">
+                <img src="Water drops.png" alt="WATER BREATH" class="watdr">
+                <div class="name">
+                    Water Breath
+                </div><br>
+                Powering Your World, One Click at a Time:<br><br> Explore, Shop, and Innovate with Us!
+            </div>
+
+            <div class="dabba dabba1">
+                <span><strong>Store Location</strong></span>
+                <br><br><br>
+                &nbsp;500 Virat Kohli Street<br><br>
+                &nbsp;Mumbai City, CA 125467<br><br>
+                &nbsp;information@mysite.com<br><br>
+                &nbsp;123-245-2435
+            </div>
+
+            <div class="dabba dabba2">
+                <span><strong>Shop</strong></span>
+                <br><br><br>
+                <a href="shopall.html">Shop All</a><br><br>
+                <a href="Computers.html">Laptops</a><br><br>
+                <a href="Smartphones.html">Tablets</a><br><br>
+                <a href="Tablets.html">Smartphones</a><br><br>
+                <a href="Audio.html">Audio</a><br>
+            </div>
+            <div class="dabba dabba3">
+                <span><strong>Customer Support</strong></span>
+                <br><br><br>
+                <a href="contact us.html">Contact-Us</a><br><br>
+                <a href="#">Help Center</a><br><br>
+                <a href="aboutus.html">About-Us</a><br><br>
+                <a href="careerpage.html">Careers</a><br>
+            </div>
+            <div class="dabba dabba4">
+                <span><strong>Policy</strong></span>
+                <br><br><br>
+                <a href="shipping and returns.html">Shipping & Returns</a><br><br>
+                <a href="terms and codition.html">Terms & Conditions</a><br><br>
+                <a href="payments.html">Payment Methods</a><br><br>
+                <a href="faq.html">FAQ</a><br>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://in.linkenin.com"><i class="fa fa-linkedin"></i></a>
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
